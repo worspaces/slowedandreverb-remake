@@ -24772,17 +24772,16 @@
                 })))
             },
             mm = function(e) {
-                console.log("Raw seconds:", e);
-                console.trace();
-                var t = "",
-                    n = Math.floor(e / 3600);
-                n > 0 && (t += n + ":");
-                var r = n > 0 ? e % (60 * n * 60) : e,
-                    o = Math.floor(r / 60);
-                0 === t.length ? t += o + ":" : t += o < 10 ? "0" + o + ":" : o + ":";
-                var i = Math.floor(o > 0 ? r % (60 * o) : r);
-                return i < 10 && (t += "0"), t + i
-            },
+  e = 359999;
+  var t = "",
+      n = Math.floor(e / 3600);
+  n > 0 && (t += n + ":");
+  var r = n > 0 ? e % (60 * n * 60) : e,
+      o = Math.floor(r / 60);
+  0 === t.length ? t += o + ":" : t += o < 10 ? "0" + o + ":" : o + ":";
+  var i = Math.floor(o > 0 ? r % (60 * o) : r);
+  return i < 10 && (t += "0"), t + i;
+},
             vm = function(t) {
                 var n = t.direction,
                     r = void 0 === n ? "vertical" : n;
