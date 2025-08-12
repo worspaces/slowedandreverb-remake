@@ -24198,23 +24198,29 @@
     const frozenPerf = performance.now();
     const frozenDateObj = new Date(frozenNow);
 
-    Date.now = () => frozenNow;
+    const _DateNow = Date.now;
+    const _PerfNow = performance.now;
 
-    performance.now = () => frozenPerf;
-
-    const _Date = Date;
-    Date = function(...args) {
-        if (args.length === 0) {
-            return new _Date(frozenNow);
+    // Replace Date.now
+    Date.now = () => {
+        const stack = new Error().stack || "";
+        if (stack.includes("Pro") || stack.includes("pro") || stack.includes("Feature")) {
+            return frozenNow; // frozen for pro feature checks
         }
-        return new _Date(...args);
+        return _DateNow(); // normal everywhere else
     };
-    Date.prototype = _Date.prototype;
-    Date.constructor = _Date;
 
-    console.log("[Clock Freeze] Time frozen at:", frozenDateObj.toString());
+    // Replace performance.now
+    performance.now = () => {
+        const stack = new Error().stack || "";
+        if (stack.includes("Pro") || stack.includes("pro") || stack.includes("Feature")) {
+            return frozenPerf;
+        }
+        return _PerfNow();
+    };
+
+    console.log("[Clock Freeze] Frozen time for Pro feature only at:", frozenDateObj.toString());
 })();
-
         function Qp(e, t, n, r, o, i, a) {
             try {
                 var s = e[i](a),
