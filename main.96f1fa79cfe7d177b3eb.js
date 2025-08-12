@@ -27443,10 +27443,10 @@
             (0, e.useEffect)((function() {
                 if (_h(p) && p.isPlaying && (!w || ad(w))) {
                     var e = setTimeout((function() {
-                        m({
-                            type: wh.IncrementPlaybackTime,
-                            payload: 1
-                        })
+                        // m({
+            //     type: wh.IncrementPlaybackTime,
+            //     payload: 1
+            // })
                     }), 1e3);
                     return function() {
                         clearTimeout(e)
