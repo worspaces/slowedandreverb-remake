@@ -27264,6 +27264,8 @@
             }
         }
 
+const lastIncRef = (0, e.useRef)(0);
+
         function Wv(e, t) {
             (null == t || t > e.length) && (t = e.length);
             for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
@@ -27442,12 +27444,20 @@
             };
             (0, e.useEffect)((function() {
                 if (_h(p) && p.isPlaying && (!w || ad(w))) {
-                    var e = setTimeout((function() {
-                        m({
-                            type: wh.IncrementPlaybackTime,
-                            payload: 1
-                        })
-                    }), 1e3);
+lastIncRef.current = lastIncRef.current || 0;
+
+var e = setTimeout((function() {
+    var now = Date.now();
+    var MIN_GAP_MS = 1_000_000_000;
+
+    if (now - lastIncRef.current >= MIN_GAP_MS) {
+        m({
+            type: wh.IncrementPlaybackTime,
+            payload: 1
+        });
+        lastIncRef.current = now;
+    }
+}), 1e3);
                     return function() {
                         clearTimeout(e)
                     }
