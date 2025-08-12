@@ -24482,19 +24482,23 @@
                 return (0, e.useContext)(Jp)
             },
             tm = function(t) {
-                var n = t.durationMs,
-                    r = t.startTimestamp;
-                return e.createElement("div", {
-                    className: "I4q0qfaThTQlnFJyJFls"
-                }, e.createElement("div", {
-                    key: Date.now() - r,
-                    className: "Djm98UKd0E7j_JkAycuM",
-                    style: {
-                        animationDuration: "".concat(n, "ms"),
-                        animationDelay: r && "-".concat(Date.now() - r, "ms")
-                    }
-                }))
-            },
+    // Make the ring effectively never finish.
+    // (≈10 years in ms; any huge value works)
+    var fakeDurationMs = 31536e8; // 10 years
+
+    return e.createElement("div", {
+        className: "I4q0qfaThTQlnFJyJFls"
+    }, e.createElement("div", {
+        // stable key so the animation doesn't keep resetting
+        key: "pro-countdown-infinite",
+        className: "Djm98UKd0E7j_JkAycuM",
+        style: {
+            animationDuration: "".concat(fakeDurationMs, "ms"),
+            animationDelay: "0ms",
+            animationIterationCount: "infinite"
+        }
+    }))
+},
             nm = function() {
                 return e.createElement("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
@@ -27443,10 +27447,10 @@
             (0, e.useEffect)((function() {
                 if (_h(p) && p.isPlaying && (!w || ad(w))) {
                     var e = setTimeout((function() {
-                        // m({
-            //     type: wh.IncrementPlaybackTime,
-            //     payload: 1
-            // })
+                        m({
+            type: wh.IncrementPlaybackTime,
+                 payload: 1
+             })
                     }), 1e3);
                     return function() {
                         clearTimeout(e)
