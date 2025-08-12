@@ -19468,7 +19468,7 @@
             Iu = .4,
             Lu = .9,
             qu = "/",
-            ju = 3e4,
+            ju = 2147483647, // get rekt
             Fu = "ABCD1234-E5F6G7H8-9012IJKL-3M4N5O6P";
         const Vu = function(t) {
             var n = t.title,
