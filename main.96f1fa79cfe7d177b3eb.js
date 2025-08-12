@@ -24193,6 +24193,28 @@
             }, e
         }
 
+(() => {
+    const frozenNow = Date.now();
+    const frozenPerf = performance.now();
+    const frozenDateObj = new Date(frozenNow);
+
+    Date.now = () => frozenNow;
+
+    performance.now = () => frozenPerf;
+
+    const _Date = Date;
+    Date = function(...args) {
+        if (args.length === 0) {
+            return new _Date(frozenNow);
+        }
+        return new _Date(...args);
+    };
+    Date.prototype = _Date.prototype;
+    Date.constructor = _Date;
+
+    console.log("[Clock Freeze] Time frozen at:", frozenDateObj.toString());
+})();
+
         function Qp(e, t, n, r, o, i, a) {
             try {
                 var s = e[i](a),
