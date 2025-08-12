@@ -27036,12 +27036,12 @@
                     }))
                 });
                 if (t.type === wh.IncrementPlaybackTime) {
-                    if (!_h(e)) return e;
-                    var u = e.remixes[e.currentRemixIndex];
-                    return ad(u) ? qv(qv({}, e), {}, {
-                        playbackPositionSeconds: Math.min(e.playbackPositionSeconds + t.payload, u.audioBuffer.duration / u.playbackRate)
-                    }) : e
-                }
+    if (!_h(e)) return e;
+    var u = e.remixes[e.currentRemixIndex];
+    return ad(u) ? qv(qv({}, e), {}, {
+        playbackPositionSeconds: e.playbackPositionSeconds + t.payload
+    }) : e
+}
                 if (t.type === wh.Seek) {
                     if (!_h(e)) return e;
                     var c = e.remixes[e.currentRemixIndex];
@@ -27264,8 +27264,6 @@
             }
         }
 
-const lastIncRef = (0, e.useRef)(0);
-
         function Wv(e, t) {
             (null == t || t > e.length) && (t = e.length);
             for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
@@ -27430,6 +27428,7 @@ const lastIncRef = (0, e.useRef)(0);
                     shouldStoreRemixes: g
                 })
             }), [y, g, p]);
+            
             var A = function(e) {
                 if (m(e), _h(p) && e.type === wh.Seek && i.current)
                     if (p.isPlaying) {
