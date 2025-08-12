@@ -19468,7 +19468,7 @@
             Iu = .4,
             Lu = .9,
             qu = "/",
-            ju = 2147483647, // get rekt
+            ju = 2147483647,
             Fu = "ABCD1234-E5F6G7H8-9012IJKL-3M4N5O6P";
         const Vu = function(t) {
             var n = t.title,
@@ -27467,7 +27467,7 @@
                 windowSize: .1
             }), l.current.connect(u.current), l.current.connect(c.current.a));
             var P, R, M, D, N, I, L, q, j = Math.round((null == w ? void 0 : w.startOffsetSeconds) * (null == w ? void 0 : w.playbackRate) * 1e3) / 1e3,
-                F = w && ad(w) && Math.round(1e3 * (w.audioBuffer.duration - w.endOffsetSeconds * w.playbackRate)) / 1e3,
+                F = w && ad(w) ? w.audioBuffer.duration : null, // idk lol
                 V = (P = function() {
                     return w && ad(w) && ![j, F].some((function(e) {
                         return "number" != typeof e || Number.isNaN(e)
