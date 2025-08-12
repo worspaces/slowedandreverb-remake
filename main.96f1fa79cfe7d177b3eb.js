@@ -30829,6 +30829,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ".mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL, " +
         ".LmaljbxPoiRQ4WIZL0LR, " +
         ".FyWNg9dmrY7mdYTbECrV.UqSipdrLfK3FjEf4VtON, " +
+        ".eNYjmfb4gphEQBHsWSEb, " +
+        ".I4q0qfaThTQlnFJyJFls, " +
       ".mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
     )
     .forEach((el) => {
@@ -30843,6 +30845,8 @@ const observer = new MutationObserver(() => {
       ".mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL, " +
     ".LmaljbxPoiRQ4WIZL0LR, " +
         ".FyWNg9dmrY7mdYTbECrV.UqSipdrLfK3FjEf4VtON, " +
+        ".eNYjmfb4gphEQBHsWSEb, " +
+        ".I4q0qfaThTQlnFJyJFls, " +
       ".mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
     )
     .forEach((el) => {
