@@ -30824,7 +30824,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(
-        ".rvtins2V7g4THcpEvSRm, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
+        ".rvtins2V7g4THcpEvSRm, mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
     ).forEach(el => {
         el.style.display = "none";
     });
@@ -30832,7 +30832,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const observer = new MutationObserver(() => {
     document.querySelectorAll(
-        ".rvtins2V7g4THcpEvSRm, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
+        ".rvtins2V7g4THcpEvSRm, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
     ).forEach(el => {
         el.style.display = "none";
     });
