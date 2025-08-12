@@ -30823,14 +30823,17 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function() {
-    const target = document.querySelector(".rvtins2V7g4THcpEvSRm");
-    if (target) {
-        target.style.display = "none";
-    }
+    document.querySelectorAll(
+        ".rvtins2V7g4THcpEvSRm, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
+    ).forEach(el => {
+        el.style.display = "none";
+    });
 });
 
 const observer = new MutationObserver(() => {
-    document.querySelectorAll(".rvtins2V7g4THcpEvSRm").forEach(el => {
+    document.querySelectorAll(
+        ".rvtins2V7g4THcpEvSRm, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB"
+    ).forEach(el => {
         el.style.display = "none";
     });
 });
