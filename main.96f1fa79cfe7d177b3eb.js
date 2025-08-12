@@ -24193,34 +24193,6 @@
             }, e
         }
 
-(() => {
-    const frozenNow = Date.now();
-    const frozenPerf = performance.now();
-    const frozenDateObj = new Date(frozenNow);
-
-    const _DateNow = Date.now;
-    const _PerfNow = performance.now;
-
-    // Replace Date.now
-    Date.now = () => {
-        const stack = new Error().stack || "";
-        if (stack.includes("Pro") || stack.includes("pro") || stack.includes("Feature")) {
-            return frozenNow; // frozen for pro feature checks
-        }
-        return _DateNow(); // normal everywhere else
-    };
-
-    // Replace performance.now
-    performance.now = () => {
-        const stack = new Error().stack || "";
-        if (stack.includes("Pro") || stack.includes("pro") || stack.includes("Feature")) {
-            return frozenPerf;
-        }
-        return _PerfNow();
-    };
-
-    console.log("[Clock Freeze] Frozen time for Pro feature only at:", frozenDateObj.toString());
-})();
         function Qp(e, t, n, r, o, i, a) {
             try {
                 var s = e[i](a),
