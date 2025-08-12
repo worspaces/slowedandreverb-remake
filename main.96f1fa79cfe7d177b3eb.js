@@ -27471,6 +27471,7 @@ var e = setTimeout((function() {
             }), u.current.connect(c.current.b)), l.current || (l.current = new na({
                 windowSize: .1
             }), l.current.connect(u.current), l.current.connect(c.current.a));
+            const lastIncRef = (0, e.useRef)(0);
             var P, R, M, D, N, I, L, q, j = Math.round((null == w ? void 0 : w.startOffsetSeconds) * (null == w ? void 0 : w.playbackRate) * 1e3) / 1e3,
                 F = w && ad(w) && Math.round(1e3 * (w.audioBuffer.duration - w.endOffsetSeconds * w.playbackRate)) / 1e3,
                 V = (P = function() {
