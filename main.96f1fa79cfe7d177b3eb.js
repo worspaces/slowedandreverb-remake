@@ -24772,7 +24772,6 @@
                 })))
             },
             mm = function(e) {
-  e = 359999;
   var t = "",
       n = Math.floor(e / 3600);
   n > 0 && (t += n + ":");
