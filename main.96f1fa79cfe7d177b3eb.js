@@ -25609,7 +25609,7 @@
                             type: Qc.RemoveAllRemixes
                         })
                     }
-                }, e.createElement(Sm, null), "Clear"), e.createElement(kp, {
+                }, e.createElement(Sm, null), "Back"), e.createElement(kp, {
                     remixes: i.remixes
                 })), e.createElement("ul", {
                     className: "pYvQyo667wPZIZH1p1e6"
