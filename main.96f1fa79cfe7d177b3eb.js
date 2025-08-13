@@ -30653,7 +30653,10 @@
 })(), document.addEventListener("DOMContentLoaded", (function() {
     document.querySelectorAll(".rvtins2V7g4THcpEvSRm, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL, .LmaljbxPoiRQ4WIZL0LR, .FyWNg9dmrY7mdYTbECrV.UqSipdrLfK3FjEf4VtON, .eNYjmfb4gphEQBHsWSEb, .I4q0qfaThTQlnFJyJFls, .BhwD0fWuC5MxZX8s8mQT, .Fht4HBFEY8se7lQiAhCV, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB")
         .forEach((e => {
-            if (!e.closest(".FmIom97veLUjv8gha8wL")) {
+            if (
+                !e.closest(".FmIom97veLUjv8gha8wL") && 
+                !(e.tagName === "BUTTON" && e.classList.contains("Fht4HBFEY8se7lQiAhCV"))
+            ) {
                 e.style.display = "none";
             }
         }));
@@ -30661,7 +30664,10 @@
 const observer = new MutationObserver((() => {
     document.querySelectorAll(".rvtins2V7g4THcpEvSRm, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL, .LmaljbxPoiRQ4WIZL0LR, .FyWNg9dmrY7mdYTbECrV.UqSipdrLfK3FjEf4VtON, .eNYjmfb4gphEQBHsWSEb, .I4q0qfaThTQlnFJyJFls, .BhwD0fWuC5MxZX8s8mQT, .Fht4HBFEY8se7lQiAhCV, .mGIDCV4c_Utm8qEAJEwW.dh6oxzn9aPi_aFCj3wlL.BmHjh0Ors5QFoqzFPBbB")
         .forEach((e => {
-            if (!e.closest(".FmIom97veLUjv8gha8wL")) {
+            if (
+                !e.closest(".FmIom97veLUjv8gha8wL") && 
+                !(e.tagName === "BUTTON" && e.classList.contains("Fht4HBFEY8se7lQiAhCV"))
+            ) {
                 e.style.display = "none";
             }
         }));
