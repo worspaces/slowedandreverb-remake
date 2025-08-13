@@ -25734,7 +25734,7 @@
                 className: "puuDfrlKec6RCQtwITrM"
             }, e.createElement("h1", null, "SAR", e.createElement("br", null), "🔊"), e.createElement("div", {
                 className: "XwPbmg8omrlZ7xGtzfQK"
-            }, e.createElement(Pm, null)), e.createElement("h2", null, "The easiest way to", " ", n ? "speed up music, make nightcore," : "make slowed+reverb, nightcore", " ", "and more (with some pro features)")), e.createElement(Mu, {
+            }, e.createElement(Pm, null)), e.createElement("h2", null, "The easiest way to", " ", n ? "speed up music, make nightcore," : "make slowed+reverb, nightcore", " ", "and more (thanks alex bainter)")), e.createElement(Mu, {
                 onClick: function() {
                     u || (s ? i() : o())
                 },
