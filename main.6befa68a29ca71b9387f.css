@@ -1,3 +1,7 @@
+ html, body {
+      font-family: 'Poppins', Impact, sans-serif !important;
+    }
+
 .OGe07rXAblHKkLZdD9Vh{animation:o_toRlLip4q3t9b1CeXE 750ms linear infinite;display:flex;align-items:center;justify-content:center}@keyframes o_toRlLip4q3t9b1CeXE{0%{transform:none}100%{transform:rotate(360deg)}}
 .FyWNg9dmrY7mdYTbECrV{font-family:inherit;font-size:1rem;color:#e6f3ff;background:linear-gradient(90deg, #1e3a8a, #1e40af);padding:.25rem .5rem;border:none;border-radius:6px;display:flex;align-items:center;justify-content:center;gap:.25rem;font-weight:500;box-sizing:border-box;cursor:pointer;text-decoration:none}.FyWNg9dmrY7mdYTbECrV:hover{background:linear-gradient(90deg, #2563eb, #3b82f6)}.UqSipdrLfK3FjEf4VtON{opacity:.4}
 .RtgfQWbH1Ud2w0S7NbK6{font-size:1.33rem;padding:.5rem;background:linear-gradient(90deg, #1e3a8a, #1e40af, #06b6d4, #1e40af, #1e3a8a);background-size:400% 400%;animation:16s infinite _mFY7d2tCaoCJ7uNYBE2;animation-delay:5s}.RtgfQWbH1Ud2w0S7NbK6:hover{background:linear-gradient(90deg, #2563eb, #3b82f6)}@keyframes _mFY7d2tCaoCJ7uNYBE2{0%{background-position:100% 50%}6%{background-position:0 50%}25%{background-position:0% 50%}50%{background-position:0% 50%}100%{background-position:0% 50%}}
